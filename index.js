@@ -3,7 +3,7 @@
 const middleware = 'yes';
 
 const middleWares = [
-  process.env.NODE_ENV === 'development' && middleware,
+  process.env.NODE_ENV !== 'production' && middleware,
 ].filter(Boolean);
 
 console.log(middleWares);
